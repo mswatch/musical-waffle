@@ -1,19 +1,26 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
-import Layout from "@/components/Layout";
-import Home from "@/pages/Home";
-import CollectionPage from "@/pages/Collection";
-import ProductPage from "@/pages/Product";
-import WishlistPage from "@/pages/Wishlist";
-import AccountPage from "@/pages/Account";
-import CheckoutPage from "@/pages/Checkout";
-import NotFound from "@/pages/NotFound";
-import { useTheme } from "@/lib/store";
-import "@/App.css";
+
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import CollectionPage from "./pages/Collection";
+import ProductPage from "./pages/Product";
+import WishlistPage from "./pages/Wishlist";
+import AccountPage from "./pages/Account";
+import CheckoutPage from "./pages/Checkout";
+import NotFound from "./pages/NotFound";
+
+import { useTheme } from "./lib/store";
+
+import "./App.css";
 
 export default function App() {
   const init = useTheme((s) => s.init);
-  useEffect(() => { init(); }, [init]);
+
+  useEffect(() => {
+    init();
+  }, [init]);
+
   return (
     <div className="App">
       <BrowserRouter>
