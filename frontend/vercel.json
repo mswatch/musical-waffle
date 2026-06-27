@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/vercel.json",
+  "rewrites": [
+    {
+      "source": "/(?!static|.*\\..*|api/)(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
